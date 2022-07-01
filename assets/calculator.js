@@ -97,3 +97,17 @@ for (const button of buttons) {
         updateDisplay();
     });
 }
+
+// Hovering in app-name section
+const app_name = document.querySelector('.app-name');
+const copyright = document.querySelector('.copyright');
+app_name.addEventListener("mouseover", mouseOver);
+app_name.addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+    copyright.style.display = "inline";
+}
+
+function mouseOut() {
+    copyright.style.display = "none";
+}

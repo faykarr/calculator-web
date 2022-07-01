@@ -34,6 +34,7 @@
 .search-icon {
     font-size: 1.2em;
     cursor: pointer;
+    user-select: none;
 }
 
 .display {
@@ -43,6 +44,7 @@
     font-family: monospace;
     font-size: 24px;
     overflow: hidden;
+    user-select: none;
 }
 
 .button-container {
@@ -53,8 +55,6 @@
     font-size: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    box-shadow: 4px 0 100px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .button-row {
@@ -71,11 +71,23 @@
     padding: 20px 45px;
     border-radius: 10px;
     transition: 0.3s;
-
+    user-select: none;
 }
 
 .button-item:hover {
     background-color: rgb(107, 33, 176);
+}
+
+.copyright {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    color: slateblue;
+    padding: 8px 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    top: 16.5%;
+    left: 5%;
 }
 
 @media screen and (max-width: 513px) {
