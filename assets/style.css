@@ -7,7 +7,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -28,10 +28,14 @@
     align-items: center;
     justify-content: space-between;
     color: white;
+    /* border: 1px solid black; */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .app-name,
-.search-icon {
+.search {
     font-size: 1.2em;
     cursor: pointer;
     user-select: none;
@@ -45,6 +49,9 @@
     font-size: 24px;
     overflow: hidden;
     user-select: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-collapse: collapse;
 }
 
 .button-container {
@@ -55,6 +62,9 @@
     font-size: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .button-row {
@@ -88,11 +98,38 @@
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     top: 16.5%;
     left: 5%;
+    border: 1px solid slateblue;
+}
+
+.history {
+    /* display: none; */
+    background-color: white;
+    border-radius: 5px;
+    color: slateblue;
+    padding: 8px 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 20.3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 1px solid slateblue;
+    border-collapse: collapse;
 }
 
 @media screen and (max-width: 513px) {
     .button-item {
         padding: 10px 25px;
+    }
+
+    .history {
+        /* display: none; */
+        padding: 4px 20px;
+        max-width: 256px;
+        top: 24%;
+        font-size: small;
     }
 }
 
@@ -104,4 +141,5 @@
     .button-item {
         margin: 0;
     }
+
 }
