@@ -98,7 +98,7 @@
 }
 
 .history {
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: white;
     border-radius: 5px;
     user-select: none;
