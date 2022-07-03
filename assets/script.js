@@ -1,17 +1,28 @@
-let displayNumber = document.getElementById('displayNumber');
+// Hovering in app-name section
+const app_name = document.querySelector('.app-name');
+const copyright = document.querySelector('.copyright');
+app_name.addEventListener("mouseover", mouseOver);
+app_name.addEventListener("mouseout", mouseOut);
 
-function ins(num) {
-    if (displayNumber.innerText == '0') {
-        displayNumber.innerText = num;
-    } else {
-        displayNumber.innerText += num;
-    }
+function mouseOver() {
+    copyright.style.display = "inline";
 }
 
-function equals() {
-    displayNumber.innerText = eval(displayNumber.innerText);
+function mouseOut() {
+    copyright.style.display = "none";
 }
 
-function clr() {
-    displayNumber.innerText = '0';
-}
+// On click history button
+const history = document.querySelector('.history');
+const search_icon = document.querySelector('.search');
+const close = document.querySelector('.close');
+// search_icon.addEventListener("click", function () {
+//     history.style.display = "block";
+// });
+search_icon.addEventListener("click", function () {
+    history.classList.toggle("hidden");
+});
+
+close.addEventListener("click", function () {
+    history.classList.toggle("hidden");
+});

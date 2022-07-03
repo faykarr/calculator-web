@@ -63,7 +63,16 @@ function performCalculation() {
         result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber);
     }
 
+    const item = {
+        firstNumber: calculator.firstNumber,
+        secondNumber: calculator.displayNumber,
+        operator: calculator.operator,
+        result: result
+    }
+
+    putHistory(item);
     calculator.displayNumber = result;
+    renderHistory();
 }
 
 for (const button of buttons) {
@@ -96,18 +105,4 @@ for (const button of buttons) {
         inputDigit(point.innerText);
         updateDisplay();
     });
-}
-
-// Hovering in app-name section
-const app_name = document.querySelector('.app-name');
-const copyright = document.querySelector('.copyright');
-app_name.addEventListener("mouseover", mouseOver);
-app_name.addEventListener("mouseout", mouseOut);
-
-function mouseOver() {
-    copyright.style.display = "inline";
-}
-
-function mouseOut() {
-    copyright.style.display = "none";
 }

@@ -12,93 +12,103 @@
 
 <body>
     <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="app-name">
-                <h2>Calculator</h2>
-                <span class="copyright">Made with ❤ by Faykar</span>
-            </div>
-            <div class="search">
-                <i class="fa fa-search"></i>
-                <div class="history">
+        <div class="border">
+            <!-- Header Section -->
+            <div class="header">
+                <div class="app-name">
+                    <h2>Calculator</h2>
+                    <span class="copyright">Made with ❤ by faykar</span>
+                </div>
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="history hidden">
                     <h2>Riwayat Perhitungan</h2>
-                    <table class="historyTable">
+                    <hr>
+                    <span class="close fa fa-close"></span>
+                    <table>
                         <thead>
-                            <tr>No</tr>
-                            <tr>Perhitungan</tr>
-                            <tr>Hasil</tr>
+                            <th>No</th>
+                            <th>Perhitungan</th>
+                            <th>Hasil</th>
                         </thead>
                         <tbody id="historyList"></tbody>
                     </table>
+                    <button class="clear-history" onclick="removeHistory()">
+                        <i class="fa fa-trash"></i>
+                        <span>Hapus History</span>
+                    </button>
                 </div>
             </div>
-        </div>
-        <!-- Display Section -->
-        <div class="display">
-            <h2 id="displayNumber">0</h2>
-        </div>
-        <!-- Button Section -->
-        <div class="button-container">
-            <div class="button-row">
-                <div class="button-item clear">
-                    C
-                </div>
-                <div class="button-item negative">
-                    &PlusMinus;
-                </div>
-                <div class="button-item operator">
-                    +
-                </div>
-                <div class="button-item operator">
-                    -
-                </div>
+            <!-- Display Section -->
+            <div class="display">
+                <h2 id="displayNumber">0</h2>
             </div>
-            <div class="button-row">
-                <div class="button-item">
-                    7
+            <!-- Button Section -->
+            <div class="button-container">
+                <div class="button-row">
+                    <div class="button-item clear">
+                        C
+                    </div>
+                    <div class="button-item negative">
+                        &PlusMinus;
+                    </div>
+                    <div class="button-item operator">
+                        +
+                    </div>
+                    <div class="button-item operator">
+                        -
+                    </div>
                 </div>
-                <div class="button-item">
-                    8
+                <div class="button-row">
+                    <div class="button-item">
+                        7
+                    </div>
+                    <div class="button-item">
+                        8
+                    </div>
+                    <div class="button-item">
+                        9
+                    </div>
+                    <div class="button-item operator">
+                        x
+                    </div>
                 </div>
-                <div class="button-item">
-                    9
+                <div class="button-row">
+                    <div class="button-item">
+                        4
+                    </div>
+                    <div class="button-item">
+                        5
+                    </div>
+                    <div class="button-item">
+                        6
+                    </div>
+                    <div class="button-item equals">
+                        &equals;
+                    </div>
                 </div>
-                <div class="button-item operator">
-                    x
-                </div>
-            </div>
-            <div class="button-row">
-                <div class="button-item">
-                    4
-                </div>
-                <div class="button-item">
-                    5
-                </div>
-                <div class="button-item">
-                    6
-                </div>
-                <div class="button-item equals">
-                    &equals;
-                </div>
-            </div>
-            <div class="button-row">
-                <div class="button-item">
-                    1
-                </div>
-                <div class="button-item">
-                    2
-                </div>
-                <div class="button-item">
-                    3
-                </div>
-                <div class="button-item">
-                    0
+                <div class="button-row">
+                    <div class="button-item">
+                        1
+                    </div>
+                    <div class="button-item">
+                        2
+                    </div>
+                    <div class="button-item">
+                        3
+                    </div>
+                    <div class="button-item">
+                        0
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Javascript -->
+    <script src="./assets/script.js"></script>
+    <script src="./assets/storage.js"></script>
     <script src="./assets/calculator.js"></script>
 </body>
 
